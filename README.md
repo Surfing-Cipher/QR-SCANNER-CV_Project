@@ -11,6 +11,21 @@ This project is highly suitable for academic presentation, demonstrating practic
 
 ---
 
+## 📸 Screenshots
+
+<div align="center">
+  <img src="demo/Screenshot_20260520_211333.png" width="30%" alt="Scanner Interface" />
+  <img src="demo/Screenshot_20260520_211428.png" width="30%" alt="Analytics Dashboard" />
+  <img src="demo/Screenshot_20260520_211446.png" width="30%" alt="Generator Tab" />
+</div>
+
+<p align="center">
+  <b>Sample QR Code for Testing:</b><br>
+  <img src="imagesforqr/qr-code.png" width="150" alt="Sample QR Code" />
+</p>
+
+---
+
 ## 🚀 Key Features
 
 ### 1. Intelligent Scanning & Processing
