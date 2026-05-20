@@ -1,0 +1,42 @@
+name: Build Windows Executable
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11' # 3.11 is very stable for PyInstaller and OpenCV
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pyinstaller
+
+    - name: Build Executable with PyInstaller
+      run: |
+        # Get path to customtkinter using Python
+        $CTK_PATH = python -c "import customtkinter; import os; print(os.path.dirname(customtkinter.__file__))"
+        echo "CustomTkinter path: $CTK_PATH"
+        
+        # Build the executable
+        pyinstaller --noconfirm --onefile --windowed --add-data "$CTK_PATH;customtkinter/" app.py
+
+    - name: Upload Windows Executable
+      uses: actions/upload-artifact@v3
+      with:
+        name: Smart-QR-Scanner-Windows
+        path: dist/app.exe
+        retention-days: 90

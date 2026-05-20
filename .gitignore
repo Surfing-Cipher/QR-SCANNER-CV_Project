@@ -29,4 +29,7 @@ Thumbs.db
 *.swp
 *.swo
 
-# Project specific
+# PyInstaller
+build/
+dist/
+*.spec
