@@ -12,10 +12,10 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: '3.11' # 3.11 is very stable for PyInstaller and OpenCV
 
@@ -35,7 +35,7 @@ jobs:
         pyinstaller --noconfirm --onefile --windowed --add-data "$CTK_PATH;customtkinter/" app.py
 
     - name: Upload Windows Executable
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: Smart-QR-Scanner-Windows
         path: dist/app.exe
