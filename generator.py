@@ -1,4 +1,6 @@
+# pyrefly: ignore [missing-import]
 import qrcode
+# pyrefly: ignore [missing-import]
 from PIL import Image
 
 def generate_qr(data, fill_color="black", back_color="white"):

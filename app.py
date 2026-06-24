@@ -1,14 +1,20 @@
+# pyrefly: ignore [missing-import]
 import customtkinter as ctk
 from tkinter import filedialog, messagebox
+# pyrefly: ignore [missing-import]
 import cv2
+# pyrefly: ignore [missing-import]
 from PIL import Image, ImageTk
 import os
 import webbrowser
 import threading
 import pyperclip
+# pyrefly: ignore [missing-import]
 import pygame
 import time
+# pyrefly: ignore [missing-import]
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+# pyrefly: ignore [missing-import]
 import matplotlib.pyplot as plt
 
 from database import init_db, add_scan, get_all_scans, export_to_csv, get_scan_stats_by_type, get_scan_stats_by_date

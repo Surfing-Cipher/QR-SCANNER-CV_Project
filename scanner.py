@@ -1,5 +1,8 @@
+# pyrefly: ignore [missing-import]
 import cv2
+# pyrefly: ignore [missing-import]
 import numpy as np
+# pyrefly: ignore [missing-import]
 from pyzbar.pyzbar import decode, ZBarSymbol
 
 def enhance_image(image):
